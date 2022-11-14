@@ -279,3 +279,126 @@
 // int N = Convert.ToInt32(Console.ReadLine());
 // sqrt(N);
 
+// //SEMINAR4 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+// //Разбор задачи на нахождение ПАЛИНДРОМА.
+
+// int numberB(int numB)
+// {
+//     int num = 0;
+//     int count = 100000;
+
+//     while (count >= 10)
+//     {
+//         num = num + (numB % 10) * (count / 10);
+//         numB = numB / 10;
+
+//         count = count / 10;
+//     }
+//     return num;
+// }
+
+// Console.WriteLine("Введите пятизначное число");
+
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if (number < 99999 && number > 9999)
+// {
+//     if (number == numberB(number))
+//     {
+//         Console.WriteLine($"Число {number} палиндром");
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Число {number} не является палиндромом");
+//     }
+// }
+// else
+// {
+//     Console.WriteLine($"Неверный ввод");
+// }
+
+
+// //Разбор задачи на нахождение координат в 3D пространстве.
+
+// Console.Clear();
+// Console.Write("Введите X1: ");
+// int x1 = int.Parse(Console.ReadLine());
+// Console.Write("Введите Y1: ");
+// int y1 = int.Parse(Console.ReadLine());
+// Console.Write("Введите Z1: ");
+// int z1 = int.Parse(Console.ReadLine());
+// Console.Write("Введите X2: ");
+// int x2 = int.Parse(Console.ReadLine());
+// Console.Write("Введите Y2: ");
+// int y2 = int.Parse(Console.ReadLine());
+// Console.Write("Введите Z2: ");
+// int z2 = int.Parse(Console.ReadLine());
+// double d = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2));
+
+// Console.WriteLine($"d={d:f3}");
+
+
+// //Разбор задачи, которая принимает на вход число (N) и выдает таблицу кубов чисел от 1 до N.
+
+// Console.Clear();
+// Console.Write("Введите число N: ");
+// int N = int.Parse(Console.ReadLine());
+// for (int i = 1; i <= N; i++)
+// {
+//     Console.Write($"{Math.Pow(i, 3)} ");    // //Console.Write($"{i * i * i}");
+// }
+
+// //Разбор задачи, которая принимает на вход число (A) и выдает сумму чисел от 1 до A.
+
+// void GetSumNums(int number)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= Math.Abs(number); i++)
+//     {
+//         sum += i;
+//     }
+//     Console.WriteLine($"Cумма цифр от 1 до введенного числа: {sum}");
+
+// }
+
+// Console.Clear();
+// // GetSumNums(5);
+// Console.Write("Введите число: ");            // // int n = Convert.ToInt32(Console.ReadLine());   // // GetSumNums(n)
+// GetSumNums(int.Parse(Console.ReadLine()));   // //GetSumNums(Convert.ToInt32(Console.ReadLine()));
+
+// //Разбор задачи, которая принимает на вход число N и выдает количество цифр в числе.
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine());
+// int sum = GetCountNums(num);
+
+// Console.WriteLine($"Количество цифр = {sum}");
+
+// int GetCountNums(int number)
+// {
+//     int count = 0;
+//     while (number > 0)
+//     {
+//         count++;
+//         number/=10;
+//     }
+//     return count;
+// }
+
+// //Напишите программу, которая выводит массив из 8 элементов,
+// //заполненный нулями и единицами в случайном порядке.
+
+// int[] array = GetBinaryArray(58);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
+
+// int[] GetBinaryArray(int size)
+// {
+//     int[] result = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         result[i] = new Random().Next(2);
+//     }
+//     return result;
+// }
