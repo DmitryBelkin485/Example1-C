@@ -1,4 +1,4 @@
-﻿Console.Clear();
+﻿// Console.Clear();
 
 // int i = 0;
 
@@ -8,7 +8,7 @@
 //     Console.WriteLine(i);
 // }
 
-// // Семинар 1
+// //SEMINAR-1 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 // // // 1 Напишите программу, которая на вход принимает число и выдает его квадрат
 // Console.Clear();
@@ -112,7 +112,7 @@
 
 
 
-
+// //SEMINAR-2 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 // // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
 
@@ -148,7 +148,7 @@
 // }
 
 
-//  SEMINAR3 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+//  SEMINAR-3 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // Задача 17. Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
 
@@ -279,7 +279,7 @@
 // int N = Convert.ToInt32(Console.ReadLine());
 // sqrt(N);
 
-// //SEMINAR4 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// //SEMINAR-4 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 // //Разбор задачи на нахождение ПАЛИНДРОМА.
 
@@ -402,3 +402,167 @@
 //     }
 //     return result;
 // }
+// //SEMINAR-5 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+// // Создание и вывод массива
+
+// // VARIANT-1.
+
+// int[] array = {8, 0, 100};
+// Console.WriteLine($"[{String.Join(",", array)}]");
+
+// // VARIANT-2.
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// // VARIANT-3.
+// Console.Clear();
+// int[] CreateArray()
+// {
+//     Console.WriteLine("Введите количество элементов массива: ");
+//     int size = Convert.ToInt32(Console.ReadLine());
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         Console.WriteLine($"Введите {i + 1} элемент массива");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+// // VARIANT-4.
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// // Задача 31: Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9,9].Найдите сумму отрицательных и положительных элементов массива.
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] myArray = CreateRandomArray(12, -9, 9);
+// ShowArray(myArray);
+
+// int SumPol = 0;
+// int SumNeg = 0;
+
+// for (int i = 0; i < myArray.Length; i++)
+// {
+//     if (myArray[i] > 0)
+//         SumPol += myArray[i];
+//     else
+//         SumNeg += myArray[i];
+// }
+// Console.WriteLine($"Сумма положительных: {SumPol}. Сумма отрицательных: {SumNeg}");
+
+
+// // Задача 32: Напишите программу замена элементов массива: положительные элементы замените на соответствующие отрицательные, и наоборот.
+// // [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+// Console.Clear();
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// int[] array = CreateRandomArray(5, -10, 10);
+// Console.WriteLine($"[{String.Join(",", array)}]");
+// for (int i = 0; i < array.Length; i++)
+// {
+//     array[i] *= -1;
+// }
+// Console.WriteLine($"[{String.Join(",", array)}]");
+
+
+
+// //Задача 33: Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
+// //4; массив [6, 7, 19, 345, 3] -> нет
+// //-3; массив [6, 7, 19, 345, 3] -> да
+
+// int[] array = CreateRandomArray(10, -10, 10);
+// Console.WriteLine($"[{String.Join(",", array)}]");
+// Console.WriteLine("Введите число: ");
+// int x = int.Parse(Console.ReadLine());
+// bool serge = false;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] == x)
+//     {
+//         serge = true;
+//     }
+// }
+// Console.WriteLine(serge ? "ДА" : "НЕТ");
+
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+// int[] array = CreateRandomArray(123, -200, 200);
+// Console.WriteLine($"[{String.Join(",", array)}]");
+// int count = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] >= 10 && array[i] <= 99)
+//     {
+//         count++;
+//     }
+// }
+// Console.WriteLine(count);
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
