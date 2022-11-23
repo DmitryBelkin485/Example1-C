@@ -566,3 +566,152 @@
 //     return RandomArray;
 // }
 
+// //SEMINAR-6 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// // Напишите программу, которая перевернет одномерный массив
+// // (последний элемент будет на первом месте, а первый - на последнем и т.д)
+// Console.Clear();
+
+// int[] array = GetArray(10, 0, 10);
+// Console.WriteLine(String.Join(" ", array));
+
+// int[] reversArray = ReversArray2(array);
+// Console.WriteLine(String.Join(" ", reversArray));
+
+// ReversArray1(array);
+// Console.WriteLine(String.Join(" ", array));
+
+// int[] GetArray(int size, int minValue, int maxValue)
+// {
+//     int[] res = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         res[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return res;
+// }
+
+// void ReversArray1(int[] inArray)
+// {
+//     for (int i = 0; i < inArray.Length / 2; i++)
+//     {
+//         int k = inArray[i];
+//         inArray[i] = inArray[inArray.Length - i - 1];
+//         inArray[inArray.Length - i - 1] = k;
+//     }
+// }
+
+// int[] ReversArray2(int[] inArray)
+// {
+//     int[] result = new int[inArray.Length];
+//     for (int i = 0; i < inArray.Length; i++)
+//     {
+//         result[i] = inArray[inArray.Length - 1 - i];
+//     }
+//     return result;
+// }
+
+// //ЗАДАЧА-40 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// // Напишите программу, которая принимает на вход три числа и проверяет,
+// // может ли существовоать треугольник со стороноами такой длины.
+
+// int[] CreateRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] treangle = CreateRandomArray(3, 10, 100);
+// ShowArray(treangle);
+
+// if (treangle[0] < treangle[1] + treangle[2] && treangle[2] < treangle[1] + treangle[0] && treangle[2] < treangle[0] + treangle[1])
+// {
+//     Console.Write("Такой треугольник существует.");
+// }
+// else
+// {
+//     Console.Write("Такой треугольник не существует.");
+// }
+
+
+// //ЗАДАЧА-42 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// // Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+
+// string ToBin(int num)
+// {
+//     string result = "";
+//     string temp = "";
+//     while (num > 0)
+//     {
+//         temp = Convert.ToString(num % 2);
+//         result = temp + result;
+//         num = num / 2;
+//     }
+//     return result;
+// }
+// Console.Write(ToBin(2));
+
+// int a = 19;
+// int b = 7;
+
+// Console.Write(a % b);
+
+
+///ЗАДАЧА-44 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// // Не используя рекурсию, выведите первые числа N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// // Если N = 5 -> 0 1 1 2 3
+// // Если N = 3 -> 0 1 1 
+
+// Console.Clear();
+// Console.Write("Сколько чисел Фибоначчи вывести? ");
+// int size = int.Parse(Console.ReadLine());
+// int[] fibs = new int[size];
+// for (int j = 0; j < 2; j++)
+// {
+//     fibs[j] = j;
+// }
+// for (int i = 2; i < fibs.Length; i++)
+// {
+//     fibs[i] = fibs[i - 1] + fibs[i - 2];
+// }
+// Console.WriteLine($"Первые {size} чисел Фибоначчи: [{String.Join(",", fibs)}]");
+
+
+// ЗАДАЧА-45 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+// // Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
+// Console.Clear();
+
+// int[] FuncGetRandomArray(int N, int start, int end)
+// {
+//     int[] RandomArray = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         RandomArray[i] = new Random().Next(start, end + 1);
+//     }
+//     return RandomArray;
+// }
+
+// int[] nums = FuncGetRandomArray(10, 0, 51);
+// int[] newnums = new int[10];
+
+// Console.Write($"Old array: [{String.Join(",", nums)}]");
+
+// for (int i = 0; i < nums.Length; i++)
+// {
+//     newnums[i] = nums[i];
+// }
+// Console.WriteLine("");
+// Console.Write($"New array: [{String.Join(",", newnums)}]");
